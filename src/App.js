@@ -1,11 +1,11 @@
-import React from 'react';
-import EventList from './components/EventList';
-import './styles/main.css';
+import React from "react";
+import EventList from "./components/EventList";
+import "./styles/main.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Event List</h1>
+      <h1>2Nite Events</h1>
       <EventList />
     </div>
   );

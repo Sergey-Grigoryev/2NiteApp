@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getEvents } from "../services/api";
-// import './EventList.css';
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
@@ -11,6 +10,7 @@ const EventList = () => {
     const fetchEvents = async () => {
       try {
         const data = await getEvents();
+        console.log("Fetched events:", data); // Debugging line
         setEvents(data);
       } catch (err) {
         setError(err.message);
@@ -32,18 +32,17 @@ const EventList = () => {
 
   return (
     <div className="event-list">
-      <h2>Upcoming Events</h2>
-      <ul>
-        {events.map((event) => (
-          <li key={event.id}>
-            <h3>{event.title}</h3>
-            <p>{event.date}</p>
-            <p>{event.description}</p>
-          </li>
-        ))}
-      </ul>
+      {events.map((event) => (
+        <div key={event.id} className="event-thumbnail">
+          <div className="event-title">{event.title}</div>
+          <div className="event-date">
+            <span>{event.date}</span>
+          </div>
+          <div className="event-description">{event.description}</div>
+          <div className="event-category">{event.category}</div>
+        </div>
+      ))}
     </div>
   );
 };
-
 export default EventList;

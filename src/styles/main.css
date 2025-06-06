@@ -12,9 +12,27 @@ h1 {
 
 .event-list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.event-thumbnail {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     padding: 20px;
+    margin: 12px;
+    width: 260px;
+    border-left: 8px solid #007bff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s;
+}
+
+.event-thumbnail:hover {
+    transform: scale(1.03);
 }
 
 .event-item {
@@ -33,16 +51,35 @@ h1 {
 }
 
 .event-title {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    font-weight: bold;
     color: #007bff;
+    margin-bottom: 8px;
 }
 
 .event-date {
-    font-size: 1em;
-    color: #666;
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+}
+
+.event-date span {
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 4px;
+    padding: 2px 8px;
 }
 
 .event-description {
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+.event-category {
     font-size: 0.9em;
-    color: #444;
+    color: #fff;
+    background: #007bff;
+    border-radius: 4px;
+    padding: 2px 8px;
 }

@@ -1,6 +1,6 @@
 {
-  "name": "My PWA Events App",
-  "short_name": "EventsApp",
+  "name": "2Nite Events App",
+  "short_name": "2NiteApp",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
